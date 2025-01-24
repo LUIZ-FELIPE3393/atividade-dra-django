@@ -1,10 +1,9 @@
 from django.db import models
 
+class Estado(models.Model):
+    nome = models.TextField(primary_key=True)
+
 class Cidade(models.Model):
     nome = models.TextField(primary_key=True)
     ibge = models.TextField()
-
-class Pessoa(models.Model):
-    nome = models.TextField()
-    idade = models.IntegerField()
-    cidade = models.ForeignKey(Cidade, on_delete=models.CASCADE)
+    estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
