@@ -25,7 +25,7 @@ class EstadoDetail(generics.RetrieveUpdateDestroyAPIView):
  
 class PessoaList(generics.ListCreateAPIView):
     queryset = models.Pessoa.objects.all()
-    serializer_class = serializers.EstadoSerializer
+    serializer_class = serializers.PessoaSerializer
 
 
 class PessoaDetail(generics.RetrieveUpdateDestroyAPIView):
